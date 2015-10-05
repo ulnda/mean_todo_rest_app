@@ -1,8 +1,20 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Task = sequelize.define('Task', {
-    title: DataTypes.STRING,
-    description: DataTypes.TEXT
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: true
+      }
+    },
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notEmpty: true
+      }
+    }
   }, {
     classMethods: {
       associate: function(models) {
