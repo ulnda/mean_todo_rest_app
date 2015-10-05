@@ -7,3 +7,5 @@
 # Ignore compiled files.
 .DS_Store
 /node_modules
+db.development.sqlite
+db.test.sqlite
